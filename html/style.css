@@ -1,0 +1,157 @@
+#container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #607773;
+    padding: 20px 25px;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Anton', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+    width: 320px;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(126, 123, 123, 0.6);
+    z-index: 9999;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    color: rgb(160, 15, 15);
+    cursor: pointer;
+}
+
+.vehicle-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.vehicle-label {
+    flex-grow: 1;
+}
+
+.vehicle-button {
+    padding: 5px 10px;
+    background-color: #3332337a;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#drag-header {
+    cursor: move;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    user-select: none;
+}
+
+
+.toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.toggle-label input {
+    display: none;
+}
+
+.toggle-slider {
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: white;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.2s ease;
+}
+
+.toggle-label input:checked + .toggle-slider {
+    background-color: #68915f;
+}
+
+.toggle-label input:checked + .toggle-slider::before {
+    transform: translateX(20px);
+}
+
+
+#color-selector {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgb(190, 184, 184);
+    transition: transform 0.2s ease;
+}
+
+.color-circle:hover {
+    transform: scale(1.2);
+}
+
+#reset-btn {
+    margin-top: 15px;
+    background-color: #68915f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+
+#reset-btn:hover {
+    background-color: #507049;
+}
+
+#pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#pagination-controls button {
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#pagination-controls button:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+

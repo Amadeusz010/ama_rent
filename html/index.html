@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle rental</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container" style="display:none;">
+        <span id="close-btn" onclick="closeUI()">×</span>
+        <h2 id="drag-header">Vehicle rental</h2>
+
+        <label class="toggle-label">
+            <input type="checkbox" id="drag-toggle">
+            <span class="toggle-slider"></span>
+            Enable movement
+        </label>
+
+        <div id="vehicle-list"></div>
+
+        <div id="pagination-controls">
+            <button id="page-up" disabled>▲</button>
+            <button id="page-down" disabled>▼</button>
+        </div>
+
+        <div id="color-selector">
+            <div class="color-circle" data-color="#607773" style="background-color: #607773;"></div>
+            <div class="color-circle" data-color="#725671" style="background-color: #725671;"></div>
+            <div class="color-circle" data-color="#565e79" style="background-color: #565e79;"></div>
+            <div class="color-circle" data-color="#8b8760" style="background-color: #8b8760;"></div>
+        </div>
+
+        <button id="reset-btn">Restore Settings</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
